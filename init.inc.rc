@@ -122,12 +122,18 @@ on boot
     chown system camera /sys/devices/platform/flashlight.0/leds/flashlight/brightness
     chmod 0660          /sys/devices/platform/flashlight.0/leds/flashlight/brightness
 
-    # Power Management
-    write /sys/devices/system/cpu/cpu0/cpufreq/ondemand/sampling_rate 40000
-
     # Enable low memory killer to check file pages
-    write /sys/module/lowmemorykiller/parameters/minfile 0,0,0,5120,5632,6144
+    write /sys/module/lowmemorykiller/parameters/minfile 2048,3072,4096,6144,7168,8192
     write /sys/module/lowmemorykiller/parameters/check_filepages 1
+
+    write /proc/sys/vm/oom_dump_tasks 1
+    write /proc/sys/vm/dirty_background_bytes 1024000
+    write /proc/sys/vm/dirty_bytes 20480000
+    write /proc/sys/vm/highmem_is_dirtyable 1
+
+    write /proc/sys/kernel/sched_latency_ns 5000000
+    write /proc/sys/kernel/sched_wakeup_granularity_ns 100000
+    write /proc/sys/kernel/sched_min_granularity_ns 100000
 
     # performance tweaks for flash
     write /sys/block/mtdblock3/bdi/read_ahead_kb 4
@@ -136,8 +142,7 @@ on boot
     # Power Management
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 245000
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 998400
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor ondemand
-    write /sys/devices/system/cpu/cpufreq/ondemand/sampling_rate 40000
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor interactive
 
 service wpa_supplicant /system/bin/logwrapper /system/bin/wpa_supplicant \
     -Dwext -ieth0 -c/data/misc/wifi/wpa_supplicant.conf
