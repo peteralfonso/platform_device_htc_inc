@@ -36,7 +36,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.cdma.otaspnumschema=SELC,1,80,99 \
 	ro.telephony.call_ring.multiple=false \
 	ro.telephony.call_ring.delay=3000 \
-	ro.url.safetylegal=http://www.htc.com/staticfiles/Support/legal/?model=A855 \
 	ro.media.dec.jpeg.memcap=20000000 \
 	ro.media.enc.jpeg.quality=95,85,70
 
