@@ -19,11 +19,15 @@ DEVICE=inc
 mkdir -p ../../../vendor/htc/$DEVICE/proprietary
 
 adb pull /system/bin/akmd ../../../vendor/htc/$DEVICE/proprietary
+adb pull /system/bin/snd ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/bin/snd8k ../../../vendor/htc/$DEVICE/proprietary
+adb pull /system/bin/sound8k ../../../vendor/htc/$DEVICE/proprietary
+adb pull /system/bin/spkamp ../../../vendor/htc/$DEVICE/proprietary
+adb pull /system/bin/wifitools ../../../vendor/htc/$DEVICE/proprietary
+adb pull /system/etc/AdieHWCodecSetting.csv ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/etc/AudioBTID.csv ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/etc/TPA2018.csv ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/etc/WPDB.zip ../../../vendor/htc/$DEVICE/proprietary
-adb pull /system/etc/firmware/bcm4329.hcd ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/etc/firmware/Incredible_C_20100310_VZW_Neo_324016_v4_PMIC.acdb ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/etc/firmware/Incredible_C_20100319_VZW_Neo_324016_v5_VZW.acdb ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/etc/firmware/Incredible_C_20100319_VZW_Neo_324016_v8_default.acdb ../../../vendor/htc/$DEVICE/proprietary
@@ -72,11 +76,15 @@ PRODUCT_COPY_FILES += \\
 # All the blobs necessary for inc
 PRODUCT_COPY_FILES += \\
     vendor/htc/__DEVICE__/proprietary/akmd:/system/bin/akmd \\
+    vendor/htc/__DEVICE__/proprietary/snd:/system/bin/snd \\
     vendor/htc/__DEVICE__/proprietary/snd8k:/system/bin/snd8k \\
+    vendor/htc/__DEVICE__/proprietary/sound8k:/system/bin/sound8k \\
+    vendor/htc/__DEVICE__/proprietary/spkamp:/system/bin/spkamp \\
+    vendor/htc/__DEVICE__/proprietary/wifitools:/system/bin/wifitools \\
+    vendor/htc/__DEVICE__/proprietary/AdieHWCodecSetting.csv:/system/etc/AdieHWCodecSetting.csv \\
     vendor/htc/__DEVICE__/proprietary/AudioBTID.csv:/system/etc/AudioBTID.csv \\
     vendor/htc/__DEVICE__/proprietary/TPA2018.csv:/system/etc/TPA2018.csv \\
     vendor/htc/__DEVICE__/proprietary/WPDB.zip:/system/etc/WPDB.zip \\
-    vendor/htc/__DEVICE__/proprietary/bcm4329.hcd:system/etc/firmware/bcm4329.hcd \\
     vendor/htc/__DEVICE__/proprietary/Incredible_C_20100310_VZW_Neo_324016_v4_PMIC.acdb:/system/etc/firmware/Incredible_C_20100310_VZW_Neo_324016_v4_PMIC.acdb \\
     vendor/htc/__DEVICE__/proprietary/Incredible_C_20100319_VZW_Neo_324016_v5_VZW.acdb:/system/etc/firmware/Incredible_C_20100319_VZW_Neo_324016_v5_VZW.acdb \\
     vendor/htc/__DEVICE__/proprietary/default.acdb:/system/etc/firmware/default.acdb \\

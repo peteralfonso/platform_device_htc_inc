@@ -53,6 +53,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/htc/inc/media_profiles.xml:system/etc/media_profiles.xml
 
+# Firmware
+PRODUCT_COPY_FILES += \
+    device/htc/inc/firmware/bcm4329.hcd:system/etc/firmware/bcm4329.hcd
+
 PRODUCT_COPY_FILES += \
     device/htc/inc/vold.fstab:system/etc/vold.fstab \
     device/htc/inc/gps.conf:system/etc/gps.conf \
