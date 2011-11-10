@@ -72,6 +72,8 @@ BOARD_EGL_CFG := device/htc/inc/egl.cfg
 
 BOARD_USES_QCOM_LIBS := true
 
+BOARD_USE_NEW_LIBRIL_HTC := true
+
 BOARD_USE_FROYO_LIBCAMERA := true
 
 # cat /proc/mtd
