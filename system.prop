@@ -26,6 +26,9 @@ dalvik.vm.heapsize=32m
 # For Verizon data retry
 ro.cdma.data_retry_config=max_retries=infinite,0,0,60000,120000,480000,900000
 
+# Recognize different PRL and PCB ID to load different acoustic ACDB for Incredible_C  	
+ro.ril.enable.prl.recognition=1
+
 # Modify MTU from 1500 to 1472 on 3G network
 ro.ril.set.mtu1472=1
 
