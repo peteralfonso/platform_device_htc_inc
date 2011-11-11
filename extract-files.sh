@@ -20,6 +20,7 @@ mkdir -p ../../../vendor/htc/$DEVICE/proprietary
 
 adb pull /system/bin/akmd ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/bin/snd8k ../../../vendor/htc/$DEVICE/proprietary
+adb pull /system/etc/AdieHWCodecSetting.csv ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/etc/AudioBTID.csv ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/etc/TPA2018.csv ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/etc/WPDB.zip ../../../vendor/htc/$DEVICE/proprietary
@@ -72,6 +73,7 @@ PRODUCT_COPY_FILES += \\
 PRODUCT_COPY_FILES += \\
     vendor/htc/__DEVICE__/proprietary/akmd:/system/bin/akmd \\
     vendor/htc/__DEVICE__/proprietary/snd8k:/system/bin/snd8k \\
+    vendor/htc/__DEVICE__/proprietary/AdieHWCodecSetting.csv:/system/etc/AdieHWCodecSetting.csv \\
     vendor/htc/__DEVICE__/proprietary/AudioBTID.csv:/system/etc/AudioBTID.csv \\
     vendor/htc/__DEVICE__/proprietary/TPA2018.csv:/system/etc/TPA2018.csv \\
     vendor/htc/__DEVICE__/proprietary/WPDB.zip:/system/etc/WPDB.zip \\
