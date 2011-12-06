@@ -126,15 +126,6 @@ on boot
     write /sys/module/lowmemorykiller/parameters/minfile 2048,3072,4096,6144,7168,8192
     write /sys/module/lowmemorykiller/parameters/check_filepages 1
 
-    write /proc/sys/vm/oom_dump_tasks 1
-    write /proc/sys/vm/dirty_background_bytes 1024000
-    write /proc/sys/vm/dirty_bytes 20480000
-    write /proc/sys/vm/highmem_is_dirtyable 1
-
-    write /proc/sys/kernel/sched_latency_ns 5000000
-    write /proc/sys/kernel/sched_wakeup_granularity_ns 100000
-    write /proc/sys/kernel/sched_min_granularity_ns 100000
-
     # performance tweaks for flash
     write /sys/block/mtdblock3/bdi/read_ahead_kb 4
     write /sys/block/mtdblock6/bdi/read_ahead_kb 4
